@@ -1,7 +1,7 @@
 {
   "name": "gestion-entretien-app",
   "version": "1.0.0",
-  "description": "Application de gestion d'entretien des véhicules",
+  "description": "Application de gestion d'entretien des v\u00e9hicules",
   "main": "index.js",
   "homepage": "./",
   "private": true,
@@ -23,8 +23,8 @@
     "react-toastify": "^11.0.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node init && react-scripts start",
+    "build": "node init && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
