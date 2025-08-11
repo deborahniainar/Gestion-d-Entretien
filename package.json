@@ -1,0 +1,56 @@
+{
+  "name": "Gestion-Park-Auto",
+  "version": "1.0.0",
+  "description": "Un système complet de gestion d'entretien de véhicules avec authentification, rappels automatiques et interface moderne.",
+  "main": "main.js",
+  "build": {
+    "appId": "com.STC.gestionparkauto",
+    "productName": "Gestion Park Auto",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "frontend/build/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "backend/",
+        "to": "backend",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/Logo.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/Logo.png"
+    }
+  },
+  "scripts": {
+    "react-build": "cd frontend && npm run build",
+    "build": "npm run react-build && electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deborahniainar/Gestion-d-Entretien.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/deborahniainar/Gestion-d-Entretien/issues"
+  },
+  "homepage": "https://github.com/deborahniainar/Gestion-d-Entretien#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "cross-env": "^10.0.0",
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12",
+    "wait-on": "^8.0.4"
+  }
+}
